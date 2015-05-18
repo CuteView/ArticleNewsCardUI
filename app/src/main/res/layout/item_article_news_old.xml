@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    card_view:cardBackgroundColor="#FFF"
+    card_view:cardPreventCornerOverlap="false"
+    card_view:cardCornerRadius="0dp" >
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <FrameLayout
+            android:id="@+id/res_new_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:id="@+id/image_news"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/test_new_image" />
+
+            <VideoView
+                android:id="@+id/video_news"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/image_news_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:text="PHOTOS"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:background="#ef5a31"
+            android:layout_alignBottom="@id/res_new_layout" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true" >
+
+            <com.deekea.articlenewscardui.ui.widget.BezelImageView xmlns:biv="http://schemas.android.com/apk/res-auto"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                biv:maskDrawable="@drawable/mask_biv_circle"
+                android:src="#ef5a31"  />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/date_day"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27"
+                    android:textColor="#FFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+
+                <TextView
+                    android:id="@+id/date_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/date_day"
+                    android:text="MAR"
+                    android:textColor="#FFF"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center" />
+                </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/content_news_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/res_new_layout"
+            android:padding="15dp" >
+
+            <TextView
+                android:id="@+id/title_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:textColor="#222"
+                android:text="True Paradise on Earth: Kereala, India"/>
+
+            <TextView
+                android:id="@+id/summary_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_news"
+                android:layout_marginTop="10dp"
+                android:textSize="22sp"
+                android:textColor="#ef5a31"
+                android:text="They call it God Own Contry."/>
+
+            <TextView
+                android:id="@+id/short_content_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/summary_news"
+                android:layout_marginTop="15dp"
+                android:textSize="18sp"
+                android:textColor="#888"
+                android:lineSpacingExtra="3dp"
+                android:lineSpacingMultiplier="1.2"
+                android:maxLines="4"
+                android:ellipsize="end"
+                android:visibility="gone"
+                android:text="It could be the par beaches and towering clif rihings height above them, or it could be the endlessly intracive netword of the river lagoons ..."/>
+
+            <TextView
+                android:id="@+id/approve_num_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/short_content_news"
+                android:layout_marginTop="25dp"
+                android:drawableLeft="@drawable/ic_approve"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:textColor="#979797"
+                android:text="3213" />
+
+            <TextView
+                android:id="@+id/comments_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/short_content_news"
+                android:layout_toRightOf="@id/approve_num_news"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="20dp"
+                android:drawableLeft="@drawable/ic_comment"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:textColor="#979797"
+                android:text="39 comments" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
